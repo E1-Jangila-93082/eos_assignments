@@ -8,9 +8,9 @@
 
 int main(){
 	struct sockaddr_un serv_addr,cli_addr;
-	socklen_t clisock_len = sizeof(cli_addr);
-	
+	socklen_t clisock_len = sizeof(cli_addr);		
 	unlink("/home/jangila/Git_data/eos_assignments/Day-11/02/my_socket");
+
 	int serv_fd = socket(AF_UNIX,SOCK_STREAM,0);
 	if(serv_fd==-1){
 		perror("-Server creation failed\n");
